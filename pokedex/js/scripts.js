@@ -102,41 +102,49 @@
 
     var modalContainer = $('#modal-container');
     //clearing all existing modal content
-    $(modalContainer).text('');
-    $(modalContainer).addClass('is-visible');
+    (modalContainer).html('');
+    (modalContainer).addClass('is-visible');
     //creating div element in DOM
     var modal = $('div');
     //adding class to div DOM element
-    $(modal).addClass("modal");
-    $(modalContainer).append(modal);
+    (modal).addClass("modal");
+    (modalContainer).html(modal);
     //creating closing button in modal content
-    var closeButtonElement = $('<button>');
-    $(closeButtonElement).addClass("modal-close");
-    $(closeButtonElement).text ('Close');
+    //var closeButtonElement = $('<button>');
+    //$(closeButtonElement).addClass("modal-close");
+    //$(closeButtonElement).text ('Close');
     // adding event listener to close modal when clicked on button
-    $(modal).append(closeButtonElement);
-    $(closeButtonElement).click(hideModal);
+    //$(modal).append(closeButtonElement);
+    //$(closeButtonElement).click(hideModal);
 
     //creating element for name in modal content
     var nameElement = $('<h1>');
-    $(nameElement).text(item.name);
-    $(modal).append(nameElement);
+    let html_text = `<div class="social modal">
+                                <button class="modal-close">Close</button>
+                          <h1>${item.name}</h1>
+                          <img class="modal-img" src="${item.imageUrl}" />
+                          <p>height : ${item.height}</p>
+                          <p>weight : ${item.weight}</p>
+                      </div>`
+    //$(nameElement).text(item.name);
+    //$(modal).append(nameElement);
     // creating img in modal content
-    var imageElement = $("<img>");
-    $(imageElement).addClass("modal-img");
-    $(imageElement).attr('src',item.imageUrl);
-    $(modal).append(imageElement);
+    //ar imageElement = $("<img>");
+    //$(imageElement).addClass("modal-img");
+    //$(imageElement).attr('src',item.imageUrl);
+    //$(modal).append(imageElement);
     //creating element for height in modal content
-    var heightElement = $("<p>");
-    $(heightElement).text ('height : ' + item.height);
-    $(modal).append(heightElement);
+    //var heightElement = $("<p>");
+    //$(heightElement).text ('height : ' + item.height);
+    //$(modal).append(heightElement);
     //creating element for weight in modal content
-    var weightElement = $("<p>");
-    $(weightElement).text ('weight : ' + item.weight);
-    $(modal).append(weightElement);
+    //var weightElement = $("<p>");
+    //$(weightElement).text ('weight : ' + item.weight);
+    //$(modal).append(weightElement);
     //appending modal content to webpage
+    modal.html(html_text)
 
-
+$('#modal-container').on('click', '.modal-close', hideModal);
 
 
 
@@ -175,7 +183,7 @@
 $(window).keydown(function(event) {
     var $modalContainer = $('#modal-container');
     if (
-      e.key === 'Escape' &&
+      event.key === 'Escape' &&
       $(modalContainer).containsClass('is-visible')
     ) {
       hideModal();
@@ -185,7 +193,7 @@ $(window).keydown(function(event) {
   //hides modal if clicked outside of it
   var modalContainer = document.querySelector('#modal-container');
   modalContainer.addEventListener('click', function(event) {
-    var target = e.target;
+    var target = event.target;
     if (target === modalContainer) {
       hideModal();
     }
