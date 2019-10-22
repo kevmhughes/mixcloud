@@ -1,74 +1,42 @@
 *{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
   box-sizing: border-box;
-}
-.page-header {
-  width: 100%;
-  padding: 0px 20px;
-  background-color: #baddf9;
-  background-image: linear-gradient(to right, lightblue, lightgreen);
 }
 
 body{
-  font-family: 'Rubik', sans-serif;
-  background-image: url();
-}
-.top-container {
-  height:10px;
+  margin: 100px 50px 20px 50px;
+  font-size: 18pt;
+  line-height: 1.6;
 }
 
 h1{
   text-align: center;
-  font-size: 50px;
+  font-weight: 700px;
   padding:10px;
   margin: 0 0 10px
 }
-
-ul:first-child{
-  padding-top:10px;
+h2 {
+  font-weight: 700;
+  font-size: 28px;
 }
 
-ul li{
-  text-align: center;
-  margin:0 auto;
-  list-style: none;
+.pokemon-picture{
+  height: 250px;
+  float: left;
 }
 
-.buttonStyle {
-   width: 50%;
-  cursor: pointer;
-  position: relative;
-  padding: 2.5rem 7.5rem;
-  border-radius: 3.75rem;
-  line-height: 2.5rem;
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom:5px;
-
-  border: 1px solid #012880;
-  background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
-  box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
-              0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
-              0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
-              0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
-
-}
-.buttonStyle:hover{
-    color:white;
-
+.pokemon-height {
+  font-weight: 300;
+  font-size: 20px;
 }
 
-img{
-  height: 60px;
-  width: auto;
+.pokemon-weight {
+  font-weight: 300;
+  font-size: 20px;
 }
 
-.bottom-container{
-  background-color: white;
-  height:30px;
+.pokemon-type {
+  font-weight: 300;
+  font-size: 20px;
 }
 
 footer {
@@ -77,98 +45,22 @@ footer {
   clear: both;
   background-image: linear-gradient(to right, lightblue, lightgreen);
 }
-footer .social {
+footer .social-media {
   text-align: center;
 }
-
-#modal-container {
-  display: none;
+.pokemon-list {
+  margin-top: 100px;
 }
 
-.modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 500px;
-  text-align: left;
-  border-radius: 10px;
-
-}
-
-.modal h1 {
-  margin-top: 10px;
-}
-
-.modal p {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-#modal-container.is-visible {
-  display: block;
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* to show it above other content */
-  z-index: 1;
-  /*to allow scrolling if the screen is not high enough*/
-  overflow: auto;
-  /* this is used to center the modal */
-  text-align: center;
-}
-
-.modal-img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: auto;
-}
-
-.modal-close{
-  -moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
-  box-shadow:inset 0px 1px 0px 0px #d9fbbe;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52));
-  background:-moz-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
-  background:-webkit-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
-  background:-o-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
-  background:-ms-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
-  background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52',GradientType=0);
-  background-color:#b8e356;
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  border-radius:6px;
-  border:1px solid #83c41a;
-  display:block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:Arial;
-  font-size:12px;
-  font-weight:bold;
-  padding:6px 6px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #86ae47;
-  float:right;
+.social-media{
+  height: 40px;
+  padding: 5px 15px 5px 15px;
 }
 
 /*==============
   MEDIA QUERIES
 ==============*/
 @media all and (max-width: 600px) {
-  .button-style  {
-    width:60%;
-    font-size: 85%;
   }
   h1 {
   font-size: 25px;
