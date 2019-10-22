@@ -7,7 +7,12 @@ body{
   font-size: 18px;
   line-height: 1.6;
 }
-
+.navbar-brand {
+  padding: 0px 0px 0px 40px;
+}
+.form-inline {
+  padding: 0px 35px 0px 0px;
+}
 h1{
   font-weight: 600;
   font-size: 20px;
@@ -45,12 +50,18 @@ footer .social-media {
   text-align: center;
 }
 .pokemon-list {
-  margin-top: 100px;
+  margin-top: 150px;
+  margin-bottom: 80px;
 }
 
 .social-media{
-  height: 40px;
-  padding: 5px 15px 5px 15px;
+  height: 60px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+.social-media-one{
+  padding: 20px 0px 0px 0px;
+  text-align: center;
 }
 
 /*==============
